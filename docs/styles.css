@@ -1,0 +1,60 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.slider {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.radio-group label {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}

@@ -4,60 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angle Selector</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #ece9e6, #ffffff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 320px;
-            text-align: center;
-        }
-        .container h2 {
-            margin-top: 0;
-            font-size: 28px;
-            color: #333;
-        }
-        .slider {
-            width: 100%;
-            margin: 20px 0;
-        }
-        .radio-group {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-        .radio-group label {
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .radio-group input {
-            margin-right: 5px;
-        }
-        input[type="number"] {
-            width: 100px;
-            padding: 8px;
-            font-size: 18px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            transition: border-color 0.3s ease;
-        }
-        input[type="number"]:focus {
-            border-color: #007BFF;
-            outline: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -72,34 +19,6 @@
             <label><input type="radio" name="angle" value="180"> 180</label>
         </div>
     </div>
-
-    <script>
-        const angleInput = document.getElementById('angleInput');
-        const angleSlider = document.getElementById('angleSlider');
-        const radioButtons = document.querySelectorAll('input[name="angle"]');
-
-        function updateUI(value) {
-            value = Math.max(0, Math.min(360, value));
-            angleInput.value = value;
-            angleSlider.value = value;
-            radioButtons.forEach(button => {
-                button.checked = button.value == value;
-            });
-        }
-
-        angleInput.addEventListener('input', () => {
-            updateUI(Number(angleInput.value));
-        });
-
-        angleSlider.addEventListener('input', () => {
-            updateUI(Number(angleSlider.value));
-        });
-
-        radioButtons.forEach(button => {
-            button.addEventListener('change', () => {
-                updateUI(Number(button.value));
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
